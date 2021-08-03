@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+body{
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header{
+  display: flex;
+  padding: 0 16px;
+}
+.sp-menu{
+  margin-left: auto;
+}
