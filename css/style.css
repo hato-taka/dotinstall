@@ -40,6 +40,10 @@ header .overlay{
 .overlay li{
   margin-top: 24px;
 }
+.overlay.active{
+  opacity: 1;
+  pointer-events: auto;
+}
 
 .sp-menu{
   margin-left: auto;
@@ -49,6 +53,10 @@ header .overlay{
   line-height: 64px;
   cursor: pointer;
 }
+#open.hide{
+  display: none;
+}
+
 main{
   padding: 0 16px;
 }
