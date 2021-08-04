@@ -24,6 +24,7 @@ header .overlay{
   text-align: center;
   opacity: 0;
   pointer-events: none;
+  transition: opacity 0.6s;
 }
 .overlay #close{
   position: absolute;
