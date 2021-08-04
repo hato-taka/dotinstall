@@ -15,9 +15,25 @@ dl > div{
 
 dt{
   padding: 8px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+dt::before{
+  content: 'Q. ';
+}
+dt:after{
+  content:'+';
+  position: absolute;
+  top: 8px;
+  right: 16px;
 }
 
 dd{
   padding: 8px;
   margin: 0;
+  display: none;
+}
+dd::before{
+  content: 'A. ';
 }
