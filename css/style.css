@@ -20,6 +20,25 @@ header .overlay{
   right: 0;
   left: 0;
   background-color: rgba(255, 255, 255, 0.9);
+  padding: 64px;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+}
+.overlay #close{
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+  font-size: 32px;
+}
+.overlay ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.overlay li{
+  margin-top: 24px;
 }
 
 .sp-menu{
