@@ -32,6 +32,7 @@
       const button = document.createElement('button');
       button.addEventListener('click', ()=>{
         currentIndex = i;        
+        updateDots();
         updateButtons();// update next&prev button
         moveSlides();
       });
@@ -69,6 +70,10 @@ prev.addEventListener('click', ()=>{
   currentIndex--;
   updateButtons();
   updateDots();
+  moveSlides();
+});
+
+window.addEventListener('resize', ()=>{
   moveSlides();
 });
 }
