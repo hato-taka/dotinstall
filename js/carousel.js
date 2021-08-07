@@ -7,6 +7,8 @@
   const dots = [];
   let currentIndex = 0;
 
+
+// create functions start
   function updateButtons(){
     prev.classList.remove('hidden');
     next.classList.remove('hidden');
@@ -29,12 +31,7 @@
     for(let i = 0; i < slides.length; i++){
       const button = document.createElement('button');
       button.addEventListener('click', ()=>{
-        currentIndex = i;
-        // once remove all current class
-        dots.forEach(dot =>{
-          dot.classList.remove('current');
-        });
-        dots[currentIndex].classList.add('current');
+        currentIndex = i;        
         updateButtons();// update next&prev button
         moveSlides();
       });
@@ -44,12 +41,25 @@
     dots[0].classList.add('current');
   };
 
+  function updateDots(){
+    // once remove all current class
+    dots.forEach(dot =>{
+      dot.classList.remove('current');
+    });
+    dots[currentIndex].classList.add('current');
+  }
+// end create function
+
+
+  //関数の実行　start
   updateButtons();
   setupDots();
+  updateDots();
 
   next.addEventListener('click', ()=>{
     currentIndex++;
     updateButtons();
+    updateDots();
     const slideWidth = slides[0].getBoundingClientRect().width;
     ul.style.transform = `translateX(${-1 * slideWidth * currentIndex}px)`;
     moveSlides();
@@ -58,6 +68,7 @@
 prev.addEventListener('click', ()=>{
   currentIndex--;
   updateButtons();
+  updateDots();
   moveSlides();
 });
 }
