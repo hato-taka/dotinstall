@@ -36,7 +36,12 @@ li img{
   font-size: 24px;
   padding: 0 8px 4px;
   transform: translateY(-50%);
+  cursor: pointer;
 }
+#prev:hover, #next:hover{
+  opacity: 0.8;
+}
+
 #prev{
   left: 0;
 }
