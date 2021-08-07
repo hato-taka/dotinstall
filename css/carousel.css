@@ -49,3 +49,7 @@ li img{
 #next{
   right: 0;
 }
+
+.hidden{
+  display: none;
+}
