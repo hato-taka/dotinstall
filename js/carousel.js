@@ -28,6 +28,16 @@
   function setupDots(){
     for(let i = 0; i < slides.length; i++){
       const button = document.createElement('button');
+      button.addEventListener('click', ()=>{
+        currentIndex = i;
+        // once remove all current class
+        dots.forEach(dot =>{
+          dot.classList.remove('current');
+        });
+        dots[currentIndex].classList.add('current');
+        updateButtons();// update next&prev button
+        moveSlides();
+      });
       dots.push(button);
       document.querySelector('nav').appendChild(button);
     }
