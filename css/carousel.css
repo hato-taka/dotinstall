@@ -57,3 +57,19 @@ li img{
 .hidden{
   display: none;
 }
+
+nav{
+  margin-top: 16px;
+  text-align: center;
+}
+nav button{
+  border: none;
+  width: 16px;
+  height: 16px;
+  background: #333;
+  border-radius: 50%;
+  cursor: pointer;
+}
+nav .current{
+  background: blue;
+}
